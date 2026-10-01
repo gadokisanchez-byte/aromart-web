@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Próximamente | AromArt Shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<div class="anuncio">
+    ENVÍOS A TODO EL PERÚ
+    <span>✦</span>
+    NUEVOS AROMAS EN CAMINO
+    <span>✦</span>
+    AROMART SHOP
+</div>
+
+
+<header class="header-catalogo">
+
+    <a class="logo" href="index.html">
+        AROMART
+        <small>SHOP</small>
+    </a>
+<button
+    class="menu-movil-btn"
+    onclick="abrirMenu()"
+    aria-label="Abrir menú"
+>
+    ☰
+</button>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="proximamente.html">Próximamente</a>
+        <a href="index.html#nosotros">Nosotros</a>
+    </nav>
+
+    <button class="btn-carrito" onclick="abrirCarrito()">
+        BOLSA
+        <span id="contador">0</span>
+    </button>
+
+</header>
+
+
+<main>
+
+<!-- PORTADA -->
+
+<section class="proxima-portada">
+
+    <div class="proxima-luz"></div>
+
+    <p class="mini revelar">
+        NUEVOS INGRESOS
+    </p>
+
+    <h1 class="revelar">
+        Lo próximo
+        <span>ya viene.</span>
+    </h1>
+
+    <p class="proxima-descripcion revelar">
+        Nuevas fragancias están viajando hacia AromArt.
+        Descubre antes que nadie lo que está por llegar.
+    </p>
+
+    <a href="#llegadas" class="btn-dorado revelar">
+        VER PRÓXIMAS LLEGADAS ↓
+    </a>
+
+</section>
+
+
+<!-- TEXTO MOVIMIENTO -->
+
+<section class="marquesina">
+
+    <div class="marquesina-contenido">
+        <span>PRÓXIMAMENTE</span>
+        <b>✦</b>
+        <span>NUEVOS AROMAS</span>
+        <b>✦</b>
+        <span>NUEVAS ESENCIAS</span>
+        <b>✦</b>
+        <span>AROMART</span>
+        <b>✦</b>
+
+        <span>PRÓXIMAMENTE</span>
+        <b>✦</b>
+        <span>NUEVOS AROMAS</span>
+        <b>✦</b>
+        <span>NUEVAS ESENCIAS</span>
+        <b>✦</b>
+        <span>AROMART</span>
+    </div>
+
+</section>
+
+
+<!-- LLEGADAS -->
+
+<section class="llegadas" id="llegadas">
+
+    <div class="encabezado-seccion revelar">
+
+        <div>
+            <p class="mini">
+                EN CAMINO
+            </p>
+
+            <h2>
+                Próximas llegadas.
+            </h2>
+        </div>
+
+        <p>
+            Algunos de los aromas que pronto
+            formarán parte de AromArt.
+        </p>
+
+    </div>
+
+
+    <div class="llegadas-grid">
+
+        <!-- 01 -->
+
+        <article class="llegada revelar">
+
+            <div class="llegada-numero">
+                01
+            </div>
+
+            <div class="llegada-visual">
+
+                <div class="perfume-silueta">
+                    ?
+                </div>
+
+            </div>
+
+            <div class="llegada-info">
+
+                <p>
+                    PERFUMERÍA ÁRABE
+                </p>
+
+                <h3>
+                    Nueva fragancia
+                </h3>
+
+                <div class="estado-llegada">
+                    <span></span>
+                    EN CAMINO
+                </div>
+
+                <button onclick="avisarme('Nueva fragancia árabe')">
+                    AVÍSAME CUANDO LLEGUE →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 02 -->
+
+        <article class="llegada revelar">
+
+            <div class="llegada-numero">
+                02
+            </div>
+
+            <div class="llegada-visual">
+
+                <div class="perfume-silueta rosa">
+                    VS
+                </div>
+
+            </div>
+
+            <div class="llegada-info">
+
+                <p>
+                    VICTORIA'S SECRET
+                </p>
+
+                <h3>
+                    Nuevo aroma VS
+                </h3>
+
+                <div class="estado-llegada">
+                    <span></span>
+                    EN CAMINO
+                </div>
+
+                <button onclick="avisarme('Nuevo aroma Victoria’s Secret')">
+                    AVÍSAME CUANDO LLEGUE →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 03 -->
+
+        <article class="llegada revelar">
+
+            <div class="llegada-numero">
+                03
+            </div>
+
+            <div class="llegada-visual">
+
+                <div class="perfume-silueta oscuro">
+                    A
+                </div>
+
+            </div>
+
+            <div class="llegada-info">
+
+                <p>
+                    AROMART SELECT
+                </p>
+
+                <h3>
+                    Próximo lanzamiento
+                </h3>
+
+                <div class="estado-llegada">
+                    <span></span>
+                    PRÓXIMAMENTE
+                </div>
+
+                <button onclick="avisarme('Próximo lanzamiento AromArt')">
+                    QUIERO SABER MÁS →
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="proxima-cta">
+
+    <p class="mini revelar">
+        NO TE LO PIERDAS
+    </p>
+
+    <h2 class="revelar">
+        Sé de los primeros
+        <span>en enterarte.</span>
+    </h2>
+
+    <p class="revelar">
+        Escríbenos y consulta por nuestras
+        próximas llegadas.
+    </p>
+
+    <button class="btn-dorado revelar" onclick="avisarme('Próximas llegadas de AromArt')">
+        QUIERO INFORMACIÓN ↗
+    </button>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        AROMART
+    </div>
+
+    <div class="footer-abajo">
+        <p>PERFUMERÍA & BODY CARE</p>
+        <p>© 2026 AROMART SHOP</p>
+    </div>
+
+</footer>
+
+
+<div class="overlay" id="overlay" onclick="cerrarCarrito()"></div>
+
+<aside class="carrito-panel" id="carrito">
+
+    <div class="carrito-header">
+
+        <div>
+            <p class="mini">TU SELECCIÓN</p>
+            <h2>Tu bolsa</h2>
+        </div>
+
+        <button onclick="cerrarCarrito()">×</button>
+
+    </div>
+
+    <div class="carrito-items" id="carritoItems">
+
+        <p class="vacio">
+            Tu bolsa está vacía.
+        </p>
+
+    </div>
+
+    <div class="carrito-footer">
+
+        <div class="subtotal">
+            <span>SUBTOTAL</span>
+            <strong id="subtotal">S/ 0.00</strong>
+        </div>
+
+        <button class="whatsapp" onclick="finalizarPedido()">
+            FINALIZAR POR WHATSAPP ↗
+        </button>
+
+    </div>
+
+</aside>
+
+
+<script src="script.js"></script>
+
+</body>
+<div class="menu-movil" id="menuMovil">
+    ...
+</div>
+
+<script src="script.js"></script>
+
+</body>
+<div class="menu-movil" id="menuMovil">
+    ...
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+</div>
+</html>

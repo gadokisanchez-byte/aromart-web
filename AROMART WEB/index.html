@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AromArt Shop | Perfumería</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<!-- CURSOR DORADO -->
+<div class="cursor"></div>
+
+
+<!-- ANUNCIO -->
+<div class="anuncio">
+    ENVÍOS A TODO EL PERÚ
+    <span>✦</span>
+    PERFUMERÍA & BODY CARE
+    <span>✦</span>
+    AROMART SHOP
+</div>
+
+
+<!-- HEADER -->
+<header id="header">
+
+    <a class="logo" href="#inicio">
+        AROMART
+        <small>SHOP</small>
+    </a>
+<button
+    class="menu-movil-btn"
+    onclick="abrirMenu()"
+    aria-label="Abrir menú"
+>
+    ☰
+</button>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+<a href="proximamente.html">
+    Próximamente
+</a>
+       <a href="nosotros.html">Nosotros</a>
+
+    <button class="btn-carrito" onclick="abrirCarrito()">
+        BOLSA
+        <span id="contador">0</span>
+    </button>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+
+    <div class="hero-luz luz-1"></div>
+    <div class="hero-luz luz-2"></div>
+
+    <div class="hero-contenido">
+
+        <p class="mini revelar">PERFUMERÍA SELECTA</p>
+
+        <h1 class="titulo-hero">
+            Encuentra el aroma
+            <span>que habla por ti.</span>
+        </h1>
+
+        <p class="hero-descripcion revelar">
+            Fragancias, body mists y perfumes seleccionados
+            para convertir cada momento en una experiencia.
+        </p>
+
+        <div class="hero-botones revelar">
+
+            <a href="#catalogo" class="btn-dorado">
+                EXPLORAR CATÁLOGO
+                <span>↗</span>
+            </a>
+
+            <a href="#proximamente" class="btn-link">
+                Ver próximamente →
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-decoracion">
+        <div class="circulo"></div>
+        <div class="botella">A</div>
+    </div>
+
+    <div class="scroll">
+        <span></span>
+        DESLIZA
+    </div>
+
+</section>
+
+
+
+<!-- MARQUESINA -->
+<section class="marquesina">
+
+    <div class="marquesina-contenido">
+
+        <span>VICTORIA'S SECRET</span>
+        <b>✦</b>
+        <span>PERFUMERÍA ÁRABE</span>
+        <b>✦</b>
+        <span>BODY MISTS</span>
+        <b>✦</b>
+        <span>FRAGANCIAS</span>
+        <b>✦</b>
+
+        <span>VICTORIA'S SECRET</span>
+        <b>✦</b>
+        <span>PERFUMERÍA ÁRABE</span>
+        <b>✦</b>
+        <span>BODY MISTS</span>
+        <b>✦</b>
+        <span>FRAGANCIAS</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- INTRO -->
+<section class="intro">
+
+    <p class="mini revelar">DESCUBRE AROMART</p>
+
+    <h2 class="revelar">
+        No vendemos solo perfumes.
+        <span>Encontramos tu esencia.</span>
+    </h2>
+
+</section>
+
+
+
+<!-- CATEGORÍAS -->
+<section class="categorias">
+
+    <article class="categoria revelar">
+        <span class="numero">01</span>
+
+        <div>
+            <p>BODY CARE</p>
+            <h3>Victoria's<br>Secret</h3>
+            <a href="#catalogo">DESCUBRIR →</a>
+        </div>
+    </article>
+
+
+    <article class="categoria revelar">
+        <span class="numero">02</span>
+
+        <div>
+            <p>PERFUMERÍA</p>
+            <h3>Aromas<br>Árabes</h3>
+            <a href="#catalogo">DESCUBRIR →</a>
+        </div>
+    </article>
+
+
+    <article class="categoria revelar">
+        <span class="numero">03</span>
+
+        <div>
+            <p>AROMART</p>
+            <h3>Nuevos<br>Ingresos</h3>
+            <a href="#proximamente">DESCUBRIR →</a>
+        </div>
+    </article>
+
+</section>
+
+
+
+<!-- CATÁLOGO -->
+<section class="catalogo" id="catalogo">
+
+    <div class="encabezado-seccion revelar">
+
+        <div>
+            <p class="mini">SELECCIÓN AROMART</p>
+            <h2>Encuentra tu próxima fragancia.</h2>
+        </div>
+
+        <p>
+            Una selección de aromas elegidos para destacar.
+        </p>
+
+    </div>
+
+
+    <!-- FILTROS -->
+    <div class="filtros revelar">
+
+        <button class="filtro activo" data-filtro="todos">
+            TODOS
+        </button>
+
+        <button class="filtro" data-filtro="vs">
+            VICTORIA'S SECRET
+        </button>
+
+        <button class="filtro" data-filtro="arabe">
+            ÁRABES
+        </button>
+
+    </div>
+
+
+    <div class="productos-grid">
+
+
+        <!-- PRODUCTO -->
+        <article class="producto revelar" data-categoria="vs">
+
+            <div class="producto-imagen">
+
+                <span class="etiqueta">BEST SELLER</span>
+
+                <div class="perfume-placeholder">
+                    VS
+                </div>
+
+            </div>
+
+            <div class="producto-info">
+
+                <p>VICTORIA'S SECRET</p>
+
+                <h3>Bare Vanilla</h3>
+
+                <div class="precio">
+                    <span>S/ 80.00</span>
+
+                    <button
+                        onclick="agregarCarrito(
+                        'Bare Vanilla',
+                        80
+                        )">
+                        +
+                    </button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCTO -->
+        <article class="producto revelar" data-categoria="vs">
+
+            <div class="producto-imagen">
+
+                <div class="perfume-placeholder">
+                    VS
+                </div>
+
+            </div>
+
+            <div class="producto-info">
+
+                <p>VICTORIA'S SECRET</p>
+
+                <h3>Velvet Petals</h3>
+
+                <div class="precio">
+
+                    <span>S/ 80.00</span>
+
+                    <button
+                        onclick="agregarCarrito(
+                        'Velvet Petals',
+                        80
+                        )">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCTO -->
+        <article class="producto revelar" data-categoria="arabe">
+
+            <div class="producto-imagen">
+
+                <span class="etiqueta">
+                    NUEVO
+                </span>
+
+                <div class="perfume-placeholder arabe">
+                    KH
+                </div>
+
+            </div>
+
+            <div class="producto-info">
+
+                <p>LATTAFA</p>
+
+                <h3>Khamrah</h3>
+
+                <div class="precio">
+
+                    <span>S/ 150.00</span>
+
+                    <button
+                        onclick="agregarCarrito(
+                        'Khamrah',
+                        150
+                        )">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCTO -->
+        <article class="producto revelar" data-categoria="arabe">
+
+            <div class="producto-imagen">
+
+                <div class="perfume-placeholder arabe">
+                    YA
+                </div>
+
+            </div>
+
+            <div class="producto-info">
+
+                <p>LATTAFA</p>
+
+                <h3>Yara</h3>
+
+                <div class="precio">
+
+                    <span>S/ 120.00</span>
+
+                    <button
+                        onclick="agregarCarrito(
+                        'Yara',
+                        120
+                        )">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- NO ENCUENTRAS -->
+<section class="solicitud">
+
+    <div class="solicitud-contenido revelar">
+
+        <p class="mini">
+            ¿BUSCAS ALGO ESPECIAL?
+        </p>
+
+        <h2>
+            ¿No encuentras
+            <span>tu perfume?</span>
+        </h2>
+
+        <p class="descripcion">
+            Cuéntanos qué fragancia estás buscando
+            y te ayudamos a conseguirla.
+        </p>
+
+        <a
+            class="btn-dorado"
+            href="https://wa.me/"
+            target="_blank"
+        >
+            SOLICITAR PERFUME ↗
+        </a>
+
+    </div>
+
+
+    <div class="pasos">
+
+        <div class="paso revelar">
+            <span>01</span>
+            <h3>Solicítalo</h3>
+            <p>Dinos qué perfume estás buscando.</p>
+        </div>
+
+        <div class="paso revelar">
+            <span>02</span>
+            <h3>Lo buscamos</h3>
+            <p>Revisamos disponibilidad para ti.</p>
+        </div>
+
+        <div class="paso revelar">
+            <span>03</span>
+            <h3>Te avisamos</h3>
+            <p>Te contactamos cuando esté disponible.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PROXIMAMENTE -->
+<section class="proximamente" id="proximamente">
+
+    <div class="encabezado-seccion revelar">
+
+        <div>
+            <p class="mini">
+                LO QUE VIENE
+            </p>
+
+            <h2>Próximamente.</h2>
+        </div>
+
+        <p>
+            Nuevas fragancias están en camino.
+        </p>
+
+    </div>
+
+
+    <div class="proximos-grid">
+
+        <article class="proximo revelar">
+
+            <div class="proximo-fondo uno"></div>
+
+            <span>PRÓXIMAMENTE</span>
+
+            <div>
+                <p>NUEVO INGRESO</p>
+                <h3>Una nueva esencia está por llegar.</h3>
+            </div>
+
+        </article>
+
+
+        <article class="proximo revelar">
+
+            <div class="proximo-fondo dos"></div>
+
+            <span>PRÓXIMAMENTE</span>
+
+            <div>
+                <p>AROMART</p>
+                <h3>Prepárate para descubrirla.</h3>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- BENEFICIOS -->
+<section class="beneficios" id="nosotros">
+
+    <p class="mini revelar">
+        POR QUÉ AROMART
+    </p>
+
+    <div class="beneficio revelar">
+
+        <span>01</span>
+
+        <h3>Selección especial</h3>
+
+        <p>
+            Fragancias escogidas cuidadosamente
+            para nuestro catálogo.
+        </p>
+
+    </div>
+
+
+    <div class="beneficio revelar">
+
+        <span>02</span>
+
+        <h3>Atención personalizada</h3>
+
+        <p>
+            Te ayudamos a encontrar el aroma
+            ideal para ti.
+        </p>
+
+    </div>
+
+
+    <div class="beneficio revelar">
+
+        <span>03</span>
+
+        <h3>Envíos a todo el Perú</h3>
+
+        <p>
+            Compra desde donde estés.
+        </p>
+
+    </div>
+
+
+    <div class="beneficio revelar">
+
+        <span>04</span>
+
+        <h3>Compra fácil</h3>
+
+        <p>
+            Arma tu pedido y envíalo directamente
+            por WhatsApp.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-logo">
+        AROMART
+    </div>
+
+    <div class="footer-abajo">
+
+        <p>PERFUMERÍA & BODY CARE</p>
+
+        <p>© 2026 AROMART SHOP</p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- FONDO DEL CARRITO -->
+<div
+    class="overlay"
+    id="overlay"
+    onclick="cerrarCarrito()">
+</div>
+
+
+
+<!-- CARRITO -->
+<aside class="carrito-panel" id="carrito">
+
+    <div class="carrito-header">
+
+        <div>
+            <p class="mini">TU SELECCIÓN</p>
+            <h2>Tu bolsa</h2>
+        </div>
+
+        <button onclick="cerrarCarrito()">
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="carrito-items"
+        id="carritoItems"
+    >
+
+        <p class="vacio">
+            Tu bolsa está vacía.
+        </p>
+
+    </div>
+
+
+    <div class="carrito-footer">
+
+        <div class="subtotal">
+
+            <span>SUBTOTAL</span>
+
+            <strong id="subtotal">
+                S/ 0.00
+            </strong>
+
+        </div>
+
+        <button
+            class="whatsapp"
+            onclick="finalizarPedido()"
+        >
+            FINALIZAR POR WHATSAPP ↗
+        </button>
+
+    </div>
+
+</aside>
+
+
+<script src="script.js"></script>
+
+</body>
+<div class="menu-movil" id="menuMovil">
+
+    <button
+        class="cerrar-menu"
+        onclick="cerrarMenu()"
+    >
+        ×
+    </button>
+
+    <p>AROMART SHOP</p>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="proximamente.html">Próximamente</a>
+        <a href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <div class="menu-movil-abajo">
+        <span>PERFUMERÍA & BODY CARE</span>
+        <span>NUEVA CAJAMARCA · PERÚ</span>
+    </div>
+
+</div>
+</html>

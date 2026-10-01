@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nosotros | AromArt Shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- ANUNCIO -->
+    <div class="anuncio">
+        ENVÍOS A TODO EL PERÚ
+        <span>✦</span>
+        FRAGANCIAS SELECCIONADAS
+        <span>✦</span>
+        AROMART SHOP
+    </div>
+
+    <!-- NAVEGACIÓN -->
+    <header class="header-catalogo">
+
+        <a href="index.html" class="logo">
+            AROMART
+            <small>SHOP</small>
+        </a>
+<button
+    class="menu-movil-btn"
+    onclick="abrirMenu()"
+    aria-label="Abrir menú"
+>
+    ☰
+</button>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="proximamente.html">Próximamente</a>
+            <a href="nosotros.html">Nosotros</a>
+        </nav>
+
+        <button class="btn-carrito" onclick="abrirCarrito()">
+            BOLSA <span id="contador">0</span>
+        </button>
+
+    </header>
+
+    <main>
+
+        <!-- PORTADA -->
+        <section class="nosotros-portada">
+
+            <div class="nosotros-orbita"></div>
+
+            <p class="mini revelar">
+                EL UNIVERSO AROMART
+            </p>
+
+            <h1 class="revelar">
+                Más que un aroma.
+                <em>Una identidad.</em>
+            </h1>
+
+            <p class="nosotros-subtitulo revelar">
+                Creemos que cada fragancia puede acompañar
+                una historia, despertar un recuerdo
+                y expresar una personalidad.
+            </p>
+
+            <a href="#historia" class="btn-dorado revelar">
+                CONOCE AROMART ↓
+            </a>
+
+        </section>
+
+        <!-- HISTORIA -->
+        <section class="historia-aromart" id="historia">
+
+            <div class="historia-visual revelar">
+
+                <div class="historia-marco">
+                    <span>A</span>
+                    <p>AROMART SHOP</p>
+                </div>
+
+                <div class="historia-numero">
+                    01 / NUESTRA ESENCIA
+                </div>
+
+            </div>
+
+            <div class="historia-texto revelar">
+
+                <p class="mini">QUIÉNES SOMOS</p>
+
+                <h2>
+                    Una pasión
+                    <em>convertida en tienda.</em>
+                </h2>
+
+                <p>
+                    AromArt Shop es un emprendimiento de perfumería
+                    y cuidado corporal ubicado en Nueva Cajamarca,
+                    San Martín, Perú.
+                </p>
+
+                <p>
+                    Nuestra propuesta reúne fragancias árabes,
+                    body mists y productos de cuidado corporal
+                    para quienes disfrutan descubrir aromas
+                    que se adapten a su estilo.
+                </p>
+
+                <p>
+                    Queremos que elegir una fragancia sea una
+                    experiencia especial, desde el primer vistazo
+                    hasta el momento de recibir tu pedido.
+                </p>
+
+                <a href="catalogo.html" class="historia-enlace">
+                    DESCUBRE NUESTRA COLECCIÓN ↗
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- VALORES -->
+        <section class="valores-aromart">
+
+            <div class="valores-titulo revelar">
+
+                <p class="mini">NUESTRA FILOSOFÍA</p>
+
+                <h2>
+                    Los detalles
+                    <em>importan.</em>
+                </h2>
+
+            </div>
+
+            <div class="valores-grid">
+
+                <article class="valor revelar">
+                    <span>01</span>
+                    <h3>Selección</h3>
+                    <p>
+                        Elegimos productos para ofrecer
+                        una colección atractiva y variada.
+                    </p>
+                </article>
+
+                <article class="valor revelar">
+                    <span>02</span>
+                    <h3>Atención</h3>
+                    <p>
+                        Te ayudamos a explorar opciones
+                        según tus gustos y preferencias.
+                    </p>
+                </article>
+
+                <article class="valor revelar">
+                    <span>03</span>
+                    <h3>Experiencia</h3>
+                    <p>
+                        Cuidamos la presentación y cada
+                        detalle de nuestra tienda.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="contacto-aromart" id="contacto">
+
+            <div class="contacto-izquierda revelar">
+
+                <p class="mini">HABLEMOS</p>
+
+                <h2>
+                    Tu próximo aroma
+                    <em>empieza aquí.</em>
+                </h2>
+
+                <p>
+                    ¿Buscas una fragancia especial?
+                    ¿Quieres consultar disponibilidad?
+                    Estamos para ayudarte.
+                </p>
+
+                <button class="btn-dorado" onclick="contactarAromArt()">
+                    ESCRÍBENOS POR WHATSAPP ↗
+                </button>
+
+            </div>
+
+            <div class="contacto-derecha revelar">
+
+                <div class="contacto-dato">
+                    <span>01 / UBICACIÓN</span>
+                    <h3>Nueva Cajamarca</h3>
+                    <p>San Martín, Perú</p>
+                </div>
+
+                <div class="contacto-dato">
+                    <span>02 / ATENCIÓN</span>
+                    <h3>Consultas y pedidos</h3>
+                    <p>Mediante WhatsApp</p>
+                </div>
+
+                <div class="contacto-dato">
+                    <span>03 / ENVÍOS</span>
+                    <h3>A nivel nacional</h3>
+                    <p>Consulta cobertura y costo de envío.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIE -->
+    <footer>
+        <div class="footer-logo">AROMART</div>
+
+        <div class="footer-abajo">
+            <p>PERFUMERÍA & BODY CARE</p>
+            <p>© 2026 AROMART SHOP</p>
+        </div>
+    </footer>
+
+    <!-- CARRITO -->
+    <div class="overlay" id="overlay" onclick="cerrarCarrito()"></div>
+
+    <aside class="carrito-panel" id="carrito">
+
+        <div class="carrito-header">
+            <div>
+                <p class="mini">TU SELECCIÓN</p>
+                <h2>Tu bolsa</h2>
+            </div>
+
+            <button onclick="cerrarCarrito()">×</button>
+        </div>
+
+        <div class="carrito-items" id="carritoItems">
+            <p class="vacio">Tu bolsa está vacía.</p>
+        </div>
+
+        <div class="carrito-footer">
+
+            <div class="subtotal">
+                <span>SUBTOTAL</span>
+                <strong id="subtotal">S/ 0.00</strong>
+            </div>
+
+            <button class="whatsapp" onclick="finalizarPedido()">
+                FINALIZAR POR WHATSAPP ↗
+            </button>
+
+        </div>
+
+    </aside>
+
+    <script src="script.js"></script>
+
+</body>
+<div class="menu-movil" id="menuMovil">
+
+    <button
+        class="cerrar-menu"
+        onclick="cerrarMenu()"
+    >
+        ×
+    </button>
+
+    <p>AROMART SHOP</p>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="proximamente.html">Próximamente</a>
+        <a href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <div class="menu-movil-abajo">
+        <span>PERFUMERÍA & BODY CARE</span>
+        <span>NUEVA CAJAMARCA · PERÚ</span>
+    </div>
+
+</div>
+</html>

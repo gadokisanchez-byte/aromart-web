@@ -1,0 +1,360 @@
+:root {
+    --negro: #080808;
+    --dorado: #d7b65d;
+    --dorado-claro: #f1d889;
+    --gris: #8b8b8b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--negro);
+    color: white;
+}
+
+.login-body {
+    min-height: 100vh;
+}
+
+.login {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+}
+
+
+/* IZQUIERDA */
+
+.login-marca {
+    min-height: 100vh;
+
+    padding: 55px 7%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 65% 50%,
+            rgba(215,182,93,.19),
+            transparent 30%
+        ),
+        #0c0c0c;
+}
+
+.login-marca::after {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -220px;
+    top: 20%;
+
+    border:
+        1px solid rgba(215,182,93,.17);
+
+    border-radius: 50%;
+
+    animation:
+        respirar 6s ease-in-out infinite;
+}
+
+.admin-logo {
+    position: relative;
+    z-index: 2;
+
+    width: fit-content;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    letter-spacing: 5px;
+}
+
+.admin-logo span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--dorado);
+
+    font-size: 7px;
+
+    letter-spacing: 7px;
+}
+
+.login-frase {
+    position: relative;
+    z-index: 2;
+}
+
+.login-frase > p,
+.mini {
+    color: var(--dorado);
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.login-frase h1 {
+    max-width: 700px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(65px, 8vw, 130px);
+
+    line-height: .83;
+
+    letter-spacing: -5px;
+}
+
+.login-frase h1 em {
+    display: block;
+
+    color: var(--dorado);
+
+    font-weight: 400;
+}
+
+.login-pie {
+    color: #444;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+
+/* FORMULARIO */
+
+.login-formulario {
+    min-height: 100vh;
+
+    padding: 70px 12%;
+
+    display: flex;
+    align-items: center;
+
+    background: #101010;
+}
+
+.formulario-contenido {
+    width: 100%;
+    max-width: 500px;
+
+    margin: auto;
+}
+
+.formulario-contenido h2 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 60px;
+
+    letter-spacing: -2px;
+}
+
+.login-descripcion {
+    margin-top: 18px;
+    margin-bottom: 55px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+#formLogin label {
+    display: block;
+
+    margin-top: 27px;
+    margin-bottom: 10px;
+
+    color: #666;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+#formLogin input {
+    width: 100%;
+
+    padding: 17px 0;
+
+    border: 0;
+    border-bottom:
+        1px solid #333;
+
+    outline: 0;
+
+    background: transparent;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition: .3s;
+}
+
+#formLogin input:focus {
+    border-color:
+        var(--dorado);
+}
+
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 60px !important;
+}
+
+.password-box button {
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border: 0;
+
+    background: transparent;
+
+    color:
+        var(--dorado);
+
+    cursor: pointer;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.entrar-admin {
+    width: 100%;
+
+    margin-top: 45px;
+
+    padding: 20px 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 0;
+
+    background:
+        var(--dorado);
+
+    color: #080808;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition: .3s;
+}
+
+.entrar-admin:hover {
+    background:
+        var(--dorado-claro);
+
+    transform:
+        translateY(-3px);
+}
+
+.entrar-admin:disabled {
+    opacity: .5;
+
+    cursor: wait;
+}
+
+.mensaje-login {
+    min-height: 20px;
+
+    margin-top: 20px;
+
+    color: #c86868;
+
+    font-size: 11px;
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes respirar {
+
+    0%, 100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.08);
+    }
+
+}
+
+
+/* CELULAR */
+
+@media(max-width:800px) {
+
+    .login {
+        grid-template-columns: 1fr;
+    }
+
+    .login-marca {
+        min-height: 390px;
+
+        padding: 35px 7%;
+    }
+
+    .login-frase h1 {
+        font-size: 65px;
+    }
+
+    .login-pie {
+        display: none;
+    }
+
+    .login-formulario {
+        min-height: auto;
+
+        padding:
+            80px 7%;
+    }
+
+}

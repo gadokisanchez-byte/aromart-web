@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Khamrah | AromArt Shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<div class="anuncio">
+    ENVÍOS A TODO EL PERÚ
+    <span>✦</span>
+    PERFUMERÍA & BODY CARE
+    <span>✦</span>
+    AROMART SHOP
+</div>
+
+
+<header class="header-catalogo">
+
+    <a class="logo" href="index.html">
+        AROMART
+        <small>SHOP</small>
+    </a>
+<button
+    class="menu-movil-btn"
+    onclick="abrirMenu()"
+    aria-label="Abrir menú"
+>
+    ☰
+</button>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="index.html#proximamente">Próximamente</a>
+        <a href="index.html#nosotros">Nosotros</a>
+    </nav>
+
+    <button class="btn-carrito" onclick="abrirCarrito()">
+        BOLSA
+        <span id="contador">0</span>
+    </button>
+
+</header>
+
+
+<main>
+
+<section class="detalle-producto">
+
+    <!-- IZQUIERDA -->
+
+    <div class="detalle-visual">
+
+        <div class="detalle-circulo"></div>
+
+        <div class="detalle-botella">
+            KH
+        </div>
+
+        <p class="detalle-flotante">
+            LATTAFA · 100 ML
+        </p>
+
+    </div>
+
+
+    <!-- DERECHA -->
+
+    <div class="detalle-info">
+
+        <a href="catalogo.html" class="volver">
+            ← VOLVER AL CATÁLOGO
+        </a>
+
+        <p class="mini">
+            LATTAFA · PERFUMERÍA ÁRABE
+        </p>
+
+        <h1>
+            Khamrah
+        </h1>
+
+        <div class="estrellas">
+            ★★★★★
+            <span>AROMART SELECT</span>
+        </div>
+
+        <p class="precio-detalle">
+            S/ 150.00
+        </p>
+
+        <p class="descripcion-detalle">
+            Una fragancia cálida, dulce y envolvente.
+            Khamrah combina acordes especiados y avainillados
+            para crear un aroma intenso y elegante.
+        </p>
+
+
+        <div class="estado-producto">
+
+            <div>
+                <span>TAMAÑO</span>
+                <strong>100 ML</strong>
+            </div>
+
+            <div>
+                <span>DISPONIBILIDAD</span>
+                <strong class="disponible">
+                    ● EN STOCK
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="cantidad-producto">
+
+            <span>CANTIDAD</span>
+
+            <div class="selector-cantidad">
+
+                <button onclick="restarCantidad()">
+                    −
+                </button>
+
+                <strong id="cantidad">
+                    1
+                </strong>
+
+                <button onclick="sumarCantidad()">
+                    +
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="agregar-grande"
+            onclick="agregarProductoDetalle()"
+        >
+            <span>AGREGAR A LA BOLSA</span>
+            <strong>S/ 150.00</strong>
+        </button>
+
+
+        <div class="beneficios-producto">
+
+            <div>
+                <span>✦</span>
+                <p>Producto seleccionado por AromArt</p>
+            </div>
+
+            <div>
+                <span>✦</span>
+                <p>Envíos a todo el Perú</p>
+            </div>
+
+            <div>
+                <span>✦</span>
+                <p>Atención personalizada</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCIA -->
+
+<section class="experiencia-producto">
+
+    <p class="mini revelar">
+        LA EXPERIENCIA
+    </p>
+
+    <h2 class="revelar">
+        Cálido. Dulce.
+        <span>Inolvidable.</span>
+    </h2>
+
+
+    <div class="notas-grid">
+
+        <div class="nota revelar">
+
+            <span>01</span>
+
+            <p>SALIDA</p>
+
+            <h3>Canela</h3>
+
+        </div>
+
+
+        <div class="nota revelar">
+
+            <span>02</span>
+
+            <p>CORAZÓN</p>
+
+            <h3>Praliné</h3>
+
+        </div>
+
+
+        <div class="nota revelar">
+
+            <span>03</span>
+
+            <p>FONDO</p>
+
+            <h3>Vainilla</h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RECOMENDACIONES -->
+
+<section class="recomendados">
+
+    <div class="encabezado-seccion revelar">
+
+        <div>
+            <p class="mini">
+                TAMBIÉN TE PUEDE GUSTAR
+            </p>
+
+            <h2>
+                Descubre más.
+            </h2>
+        </div>
+
+    </div>
+
+
+    <div class="recomendados-grid">
+
+        <a href="catalogo.html" class="recomendado revelar">
+
+            <div class="mini-botella">
+                YA
+            </div>
+
+            <p>LATTAFA</p>
+
+            <h3>Yara</h3>
+
+            <span>S/ 120.00</span>
+
+        </a>
+
+
+        <a href="catalogo.html" class="recomendado revelar">
+
+            <div class="mini-botella">
+                MS
+            </div>
+
+            <p>ARMAF</p>
+
+            <h3>Mandarin Sky</h3>
+
+            <span>S/ 145.00</span>
+
+        </a>
+
+
+        <a href="catalogo.html" class="recomendado revelar">
+
+            <div class="mini-botella">
+                VS
+            </div>
+
+            <p>VICTORIA'S SECRET</p>
+
+            <h3>Bare Vanilla</h3>
+
+            <span>S/ 80.00</span>
+
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        AROMART
+    </div>
+
+    <div class="footer-abajo">
+
+        <p>
+            PERFUMERÍA & BODY CARE
+        </p>
+
+        <p>
+            © 2026 AROMART SHOP
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- CARRITO -->
+
+<div
+    class="overlay"
+    id="overlay"
+    onclick="cerrarCarrito()">
+</div>
+
+
+<aside
+    class="carrito-panel"
+    id="carrito"
+>
+
+    <div class="carrito-header">
+
+        <div>
+            <p class="mini">TU SELECCIÓN</p>
+            <h2>Tu bolsa</h2>
+        </div>
+
+        <button onclick="cerrarCarrito()">
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="carrito-items"
+        id="carritoItems"
+    >
+        <p class="vacio">
+            Tu bolsa está vacía.
+        </p>
+    </div>
+
+
+    <div class="carrito-footer">
+
+        <div class="subtotal">
+
+            <span>SUBTOTAL</span>
+
+            <strong id="subtotal">
+                S/ 0.00
+            </strong>
+
+        </div>
+
+        <button
+            class="whatsapp"
+            onclick="finalizarPedido()"
+        >
+            FINALIZAR POR WHATSAPP ↗
+        </button>
+
+    </div>
+
+</aside>
+
+
+<script src="script.js"></script>
+
+</body>
+<div class="menu-movil" id="menuMovil">
+
+    <button
+        class="cerrar-menu"
+        onclick="cerrarMenu()"
+    >
+        ×
+    </button>
+
+    <p>AROMART SHOP</p>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="proximamente.html">Próximamente</a>
+        <a href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <div class="menu-movil-abajo">
+        <span>PERFUMERÍA & BODY CARE</span>
+        <span>NUEVA CAJAMARCA · PERÚ</span>
+    </div>
+
+</div>
+</html>

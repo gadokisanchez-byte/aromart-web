@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo | AromArt Shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<div class="anuncio">
+    ENVÍOS A TODO EL PERÚ
+    <span>✦</span>
+    PERFUMERÍA & BODY CARE
+    <span>✦</span>
+    AROMART SHOP
+</div>
+
+
+<header class="header-catalogo">
+
+    <a class="logo" href="index.html">
+        AROMART
+        <small>SHOP</small>
+    </a>
+<button
+    class="menu-movil-btn"
+    onclick="abrirMenu()"
+    aria-label="Abrir menú"
+>
+    ☰
+</button>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="index.html#proximamente">Próximamente</a>
+        <a href="index.html#nosotros">Nosotros</a>
+    </nav>
+
+    <button class="btn-carrito" onclick="abrirCarrito()">
+        BOLSA
+        <span id="contador">0</span>
+    </button>
+
+</header>
+
+
+<main>
+
+<!-- PORTADA CATÁLOGO -->
+
+<section class="catalogo-portada">
+
+    <p class="mini revelar">
+        COLECCIÓN AROMART
+    </p>
+
+    <h1 class="revelar">
+        Encuentra tu
+        <span>esencia.</span>
+    </h1>
+
+    <p class="revelar">
+        Descubre nuestra selección de fragancias,
+        body mists y perfumería árabe.
+    </p>
+
+</section>
+
+
+<!-- BUSCADOR -->
+
+<section class="zona-catalogo">
+
+    <div class="buscador-contenedor revelar">
+
+        <span>⌕</span>
+
+        <input
+            type="text"
+            id="buscador"
+            placeholder="Buscar una fragancia..."
+            autocomplete="off"
+        >
+
+    </div>
+
+
+    <div class="catalogo-herramientas revelar">
+
+        <div class="filtros">
+
+            <button class="filtro activo" data-filtro="todos">
+                TODOS
+            </button>
+
+            <button class="filtro" data-filtro="vs">
+                VICTORIA'S SECRET
+            </button>
+
+            <button class="filtro" data-filtro="arabe">
+                PERFUMERÍA ÁRABE
+            </button>
+
+        </div>
+
+        <p id="cantidadProductos">
+            6 PRODUCTOS
+        </p>
+
+    </div>
+
+
+    <!-- PRODUCTOS -->
+
+    <div class="productos-grid" id="listaProductos">
+
+
+        <article
+            class="producto revelar"
+            data-categoria="vs"
+            data-nombre="bare vanilla victoria secret"
+        >
+
+            <div class="producto-imagen">
+
+                <span class="etiqueta">
+                    BEST SELLER
+                </span>
+
+                <button class="favorito">♡</button>
+
+                <div class="perfume-placeholder">
+                    VS
+                </div>
+
+            </div>
+
+            <div class="producto-info">
+
+                <p>VICTORIA'S SECRET</p>
+
+                <h3>Bare Vanilla</h3>
+
+                <div class="precio">
+
+                    <span>S/ 80.00</span>
+
+                    <button onclick="agregarCarrito('Bare Vanilla',80)">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article
+            class="producto revelar"
+            data-categoria="vs"
+            data-nombre="velvet petals victoria secret"
+        >
+
+            <div class="producto-imagen">
+
+                <button class="favorito">♡</button>
+
+                <div class="perfume-placeholder">
+                    VS
+                </div>
+
+            </div>
+
+            <div class="producto-info">
+
+                <p>VICTORIA'S SECRET</p>
+
+                <h3>Velvet Petals</h3>
+
+                <div class="precio">
+
+                    <span>S/ 80.00</span>
+
+                    <button onclick="agregarCarrito('Velvet Petals',80)">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article
+            class="producto revelar"
+            data-categoria="vs"
+            data-nombre="pure seduction victoria secret"
+        >
+
+            <div class="producto-imagen">
+
+                <button class="favorito">♡</button>
+
+                <div class="perfume-placeholder">
+                    VS
+                </div>
+
+            </div>
+
+            <div class="producto-info">
+
+                <p>VICTORIA'S SECRET</p>
+
+                <h3>Pure Seduction</h3>
+
+                <div class="precio">
+
+                    <span>S/ 80.00</span>
+
+                    <button onclick="agregarCarrito('Pure Seduction',80)">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article
+            class="producto revelar"
+            data-categoria="arabe"
+            data-nombre="khamrah lattafa perfume arabe"
+        >
+
+            <div class="producto-imagen">
+
+                <span class="etiqueta">
+                    NUEVO
+                </span>
+
+                <button class="favorito">♡</button>
+
+                <div class="perfume-placeholder arabe">
+                    KH
+                </div>
+
+            </div>
+
+            <div class="producto-info">
+
+                <p>LATTAFA</p>
+
+                <h3>
+    <a class="nombre-producto" href="producto.html">
+        Khamrah
+    </a>
+</h3>
+
+                <div class="precio">
+
+                    <span>S/ 150.00</span>
+
+                    <button onclick="agregarCarrito('Khamrah',150)">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article
+            class="producto revelar"
+            data-categoria="arabe"
+            data-nombre="yara lattafa perfume arabe"
+        >
+
+            <div class="producto-imagen">
+
+                <button class="favorito">♡</button>
+
+                <div class="perfume-placeholder arabe">
+                    YA
+                </div>
+
+            </div>
+
+            <div class="producto-info">
+
+                <p>LATTAFA</p>
+
+                <h3>Yara</h3>
+
+                <div class="precio">
+
+                    <span>S/ 120.00</span>
+
+                    <button onclick="agregarCarrito('Yara',120)">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article
+            class="producto revelar"
+            data-categoria="arabe"
+            data-nombre="mandarin sky armaf perfume arabe"
+        >
+
+            <div class="producto-imagen">
+
+                <button class="favorito">♡</button>
+
+                <div class="perfume-placeholder arabe">
+                    MS
+                </div>
+
+            </div>
+
+            <div class="producto-info">
+
+                <p>ARMAF</p>
+
+                <h3>Mandarin Sky</h3>
+
+                <div class="precio">
+
+                    <span>S/ 145.00</span>
+
+                    <button onclick="agregarCarrito('Mandarin Sky',145)">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <div id="sinResultados" class="sin-resultados">
+
+        <span>✦</span>
+
+        <h2>No encontramos esa fragancia.</h2>
+
+        <p>
+            Escríbenos y podemos ayudarte a conseguirla.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        AROMART
+    </div>
+
+    <div class="footer-abajo">
+
+        <p>
+            PERFUMERÍA & BODY CARE
+        </p>
+
+        <p>
+            © 2026 AROMART SHOP
+        </p>
+
+    </div>
+
+</footer>
+
+
+<div
+    class="overlay"
+    id="overlay"
+    onclick="cerrarCarrito()"
+></div>
+
+
+<aside
+    class="carrito-panel"
+    id="carrito"
+>
+
+    <div class="carrito-header">
+
+        <div>
+
+            <p class="mini">
+                TU SELECCIÓN
+            </p>
+
+            <h2>Tu bolsa</h2>
+
+        </div>
+
+        <button onclick="cerrarCarrito()">
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="carrito-items"
+        id="carritoItems"
+    >
+
+        <p class="vacio">
+            Tu bolsa está vacía.
+        </p>
+
+    </div>
+
+
+    <div class="carrito-footer">
+
+        <div class="subtotal">
+
+            <span>SUBTOTAL</span>
+
+            <strong id="subtotal">
+                S/ 0.00
+            </strong>
+
+        </div>
+
+        <button
+            class="whatsapp"
+            onclick="finalizarPedido()"
+        >
+            FINALIZAR POR WHATSAPP ↗
+        </button>
+
+    </div>
+
+</aside>
+
+
+<script src="script.js"></script>
+
+</body>
+<div class="menu-movil" id="menuMovil">
+
+    <button
+        class="cerrar-menu"
+        onclick="cerrarMenu()"
+    >
+        ×
+    </button>
+
+    <p>AROMART SHOP</p>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="proximamente.html">Próximamente</a>
+        <a href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <div class="menu-movil-abajo">
+        <span>PERFUMERÍA & BODY CARE</span>
+        <span>NUEVA CAJAMARCA · PERÚ</span>
+    </div>
+
+</div>
+</html>
