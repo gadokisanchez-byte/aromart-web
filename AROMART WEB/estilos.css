@@ -2769,3 +2769,24 @@ footer {
 body.menu-abierto {
     overflow: hidden;
 }
+
+
+/* PRODUCTOS REALES AROMART */
+.producto-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 28px;
+    transition: transform .6s cubic-bezier(.2,.8,.2,1), filter .4s;
+}
+.producto:hover .producto-foto { transform: translateY(-8px) scale(1.045); }
+.producto.agotado .producto-foto { filter: grayscale(.45) brightness(.68); }
+.etiqueta-agotado { background: #242424; color: #aaa; }
+.btn-agotado {
+    width: auto !important; min-width: 78px; padding: 0 10px !important;
+    font-size: 8px !important; letter-spacing: 1px; border-radius: 0 !important;
+}
+@media (max-width: 600px) { .producto-foto { padding: 18px; } }
+
+/* ===== AROMART FINAL POLISH ===== */
+.ver-catalogo-completo{display:flex;justify-content:center;margin-top:42px}.producto-foto{width:100%;height:100%;object-fit:contain;display:block}.producto-imagen{overflow:hidden}.crema-card{background:radial-gradient(circle at 50% 35%,#f4e4cf,#b98754 70%,#2b1b12);color:#fff}.producto.agotado{opacity:.86}.producto.oculto{display:none!important}.filtro{white-space:nowrap}.catalogo-herramientas{gap:20px}.buscador-contenedor input{width:100%}@media(max-width:700px){.catalogo-herramientas{align-items:flex-start}.filtros{overflow-x:auto;width:100%;padding-bottom:8px}.productos-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.producto-info{padding:16px 12px}.producto-info h3{font-size:16px}.precio{gap:8px}.precio span{font-size:14px}.producto-imagen{min-height:230px}.ver-catalogo-completo{margin-top:28px}}@media(max-width:420px){.producto-imagen{min-height:190px}}

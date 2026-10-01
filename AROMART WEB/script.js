@@ -7,15 +7,12 @@ let carrito = JSON.parse(localStorage.getItem("aromartCarrito")) || [];
 
 const header = document.getElementById("header");
 
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 80) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
-
-});
+if (header) {
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 80) header.classList.add("scrolled");
+        else header.classList.remove("scrolled");
+    });
+}
 
 
 /* ==============================
@@ -55,46 +52,40 @@ elementos.forEach(elemento => {
 
 
 /* ==============================
-   FILTROS
+   FILTROS + BUSCADOR
 ============================== */
 
-const filtros = document.querySelectorAll(".filtro");
-const productos = document.querySelectorAll(".producto");
+let filtroActivo = "todos";
 
-filtros.forEach(filtro => {
-
-    filtro.addEventListener("click", () => {
-
-        filtros.forEach(f => {
-            f.classList.remove("activo");
-        });
-
-        filtro.classList.add("activo");
-
-        const categoria =
-            filtro.dataset.filtro;
-
-        productos.forEach(producto => {
-
-            if (
-                categoria === "todos" ||
-                producto.dataset.categoria === categoria
-            ) {
-
-                producto.classList.remove("oculto");
-
-            } else {
-
-                producto.classList.add("oculto");
-
-            }
-
-        });
-
+function aplicarFiltrosCatalogo() {
+    const lista = document.querySelectorAll("#listaProductos .producto");
+    if (!lista.length) return;
+    const buscadorEl = document.getElementById("buscador");
+    const texto = buscadorEl ? buscadorEl.value.toLowerCase().trim() : "";
+    let visibles = 0;
+    lista.forEach(producto => {
+        const nombre = (producto.dataset.nombre || producto.textContent).toLowerCase();
+        const coincideTexto = nombre.includes(texto);
+        const coincideCategoria = filtroActivo === "todos" || producto.dataset.categoria === filtroActivo;
+        const mostrar = coincideTexto && coincideCategoria;
+        producto.classList.toggle("oculto", !mostrar);
+        producto.style.display = mostrar ? "" : "none";
+        if (mostrar) visibles++;
     });
+    const cantidad = document.getElementById("cantidadProductos");
+    if (cantidad) cantidad.textContent = `${visibles} ${visibles === 1 ? "PRODUCTO" : "PRODUCTOS"}`;
+    const vacio = document.getElementById("sinResultados");
+    if (vacio) vacio.style.display = visibles === 0 ? "block" : "none";
+}
 
+document.querySelectorAll(".filtro").forEach(filtro => {
+    filtro.addEventListener("click", () => {
+        document.querySelectorAll(".filtro").forEach(f => f.classList.remove("activo"));
+        filtro.classList.add("activo");
+        filtroActivo = filtro.dataset.filtro || "todos";
+        aplicarFiltrosCatalogo();
+    });
 });
-
 
 /* ==============================
    CARRITO
@@ -164,10 +155,9 @@ function actualizarCarrito() {
         );
 
 
-    contador.textContent = cantidadTotal;
-
-    subtotal.textContent =
-        `S/ ${precioTotal.toFixed(2)}`;
+    if (contador) contador.textContent = cantidadTotal;
+    if (subtotal) subtotal.textContent = `S/ ${precioTotal.toFixed(2)}`;
+    if (!contenedor) return;
 
 
     if (carrito.length === 0) {
@@ -294,91 +284,8 @@ function finalizarPedido() {
 /* ==================================
    BUSCADOR DEL CATÁLOGO
 ================================== */
-
-const buscador =
-    document.getElementById("buscador");
-
-const cantidadProductos =
-    document.getElementById("cantidadProductos");
-
-const sinResultados =
-    document.getElementById("sinResultados");
-
-
-if (buscador) {
-
-    buscador.addEventListener(
-        "input",
-        buscarProductos
-    );
-
-}
-
-
-function buscarProductos() {
-
-    const texto =
-        buscador.value
-            .toLowerCase()
-            .trim();
-
-    const productosCatalogo =
-        document.querySelectorAll(
-            "#listaProductos .producto"
-        );
-
-    let visibles = 0;
-
-
-    productosCatalogo.forEach(
-        producto => {
-
-            const nombre =
-                producto.dataset.nombre
-                    .toLowerCase();
-
-            if (
-                nombre.includes(texto)
-            ) {
-
-                producto.style.display =
-                    "";
-
-                visibles++;
-
-            } else {
-
-                producto.style.display =
-                    "none";
-
-            }
-
-        }
-    );
-
-
-    cantidadProductos.textContent =
-        `${visibles} ${
-            visibles === 1
-            ? "PRODUCTO"
-            : "PRODUCTOS"
-        }`;
-
-
-    if (visibles === 0) {
-
-        sinResultados.style.display =
-            "block";
-
-    } else {
-
-        sinResultados.style.display =
-            "none";
-
-    }
-
-}
-
+const buscador = document.getElementById("buscador");
+if (buscador) buscador.addEventListener("input", aplicarFiltrosCatalogo);
 
 /* ==================================
    FAVORITOS
@@ -524,6 +431,10 @@ function contactarAromArt() {
 
 document.addEventListener("DOMContentLoaded", () => {
     actualizarCarrito();
+    const lista = document.querySelectorAll("#listaProductos .producto");
+    const cantidad = document.getElementById("cantidadProductos");
+    if (cantidad) cantidad.textContent = `${lista.length} ${lista.length === 1 ? "PRODUCTO" : "PRODUCTOS"}`;
+    aplicarFiltrosCatalogo();
 });
 /* ==================================
    MENÚ MÓVIL
