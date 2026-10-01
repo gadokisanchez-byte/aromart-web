@@ -1,3 +1,5 @@
+function toggleMenu(btn){const links=btn.parentElement.querySelector('.links');if(!links)return;const open=links.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');}
+document.addEventListener('click',e=>{if(!e.target.closest('.nav'))document.querySelectorAll('.links.open').forEach(x=>x.classList.remove('open'))});
 const PHONE='51932666874';
 const INV_KEY='aromart_inventory_v2';
 const slug=n=>n.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
