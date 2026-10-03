@@ -4,7 +4,7 @@ async function iniciarSesion(e){e.preventDefault();const email=document.getEleme
 function mostrarPassword(){const p=document.getElementById('password'),b=document.getElementById('verPassword');p.type=p.type==='password'?'text':'password';b.textContent=p.type==='password'?'VER':'OCULTAR'}
 
 const KEY='aromart_inventory_v2', SALES='aromart_sales_v2';
-const allBase=()=>[...(window.STOCK||[]),...(window.UPCOMING||[])];
+let allBase=()=>[...(window.STOCK||[]),...(window.UPCOMING||[])];
 let inv=JSON.parse(localStorage.getItem(KEY)||'{}');let sales=JSON.parse(localStorage.getItem(SALES)||'[]');
 const idOf=n=>n.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 function ensure(){allBase().forEach(p=>{const id=idOf(p.name);if(!inv[id])inv[id]={qty:p.upcoming?0:1,cost:0,price:p.price||0,status:p.upcoming?'proximamente':'disponible'};else if(inv[id].price==null)inv[id].price=p.price||0});persist()}

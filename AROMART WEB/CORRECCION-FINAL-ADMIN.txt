@@ -1,0 +1,6 @@
+AROMART SHOP — CORRECCIÓN FINAL ADMIN
+- Corregido: Assignment to constant variable (allBase).
+- Corregido guardado de cupones/avisos en Supabase.
+- Añadido cache-buster al panel para forzar la carga del JS nuevo.
+- No es necesario volver a ejecutar SUPABASE-SETUP.sql.
+Sube esta carpeta completa al repositorio con GitHub Desktop y Push origin.
