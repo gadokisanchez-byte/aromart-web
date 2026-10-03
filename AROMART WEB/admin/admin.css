@@ -1,0 +1,369 @@
+:root {
+    --negro: #080808;
+    --dorado: #d7b65d;
+    --dorado-claro: #f1d889;
+    --gris: #8b8b8b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--negro);
+    color: white;
+}
+
+.login-body {
+    min-height: 100vh;
+}
+
+.login {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+}
+
+
+/* IZQUIERDA */
+
+.login-marca {
+    min-height: 100vh;
+
+    padding: 55px 7%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 65% 50%,
+            rgba(215,182,93,.19),
+            transparent 30%
+        ),
+        #0c0c0c;
+}
+
+.login-marca::after {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -220px;
+    top: 20%;
+
+    border:
+        1px solid rgba(215,182,93,.17);
+
+    border-radius: 50%;
+
+    animation:
+        respirar 6s ease-in-out infinite;
+}
+
+.admin-logo {
+    position: relative;
+    z-index: 2;
+
+    width: fit-content;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    letter-spacing: 5px;
+}
+
+.admin-logo span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--dorado);
+
+    font-size: 7px;
+
+    letter-spacing: 7px;
+}
+
+.login-frase {
+    position: relative;
+    z-index: 2;
+}
+
+.login-frase > p,
+.mini {
+    color: var(--dorado);
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.login-frase h1 {
+    max-width: 700px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(65px, 8vw, 130px);
+
+    line-height: .83;
+
+    letter-spacing: -5px;
+}
+
+.login-frase h1 em {
+    display: block;
+
+    color: var(--dorado);
+
+    font-weight: 400;
+}
+
+.login-pie {
+    color: #444;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+
+/* FORMULARIO */
+
+.login-formulario {
+    min-height: 100vh;
+
+    padding: 70px 12%;
+
+    display: flex;
+    align-items: center;
+
+    background: #101010;
+}
+
+.formulario-contenido {
+    width: 100%;
+    max-width: 500px;
+
+    margin: auto;
+}
+
+.formulario-contenido h2 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 60px;
+
+    letter-spacing: -2px;
+}
+
+.login-descripcion {
+    margin-top: 18px;
+    margin-bottom: 55px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+#formLogin label {
+    display: block;
+
+    margin-top: 27px;
+    margin-bottom: 10px;
+
+    color: #666;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+#formLogin input {
+    width: 100%;
+
+    padding: 17px 0;
+
+    border: 0;
+    border-bottom:
+        1px solid #333;
+
+    outline: 0;
+
+    background: transparent;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition: .3s;
+}
+
+#formLogin input:focus {
+    border-color:
+        var(--dorado);
+}
+
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 60px !important;
+}
+
+.password-box button {
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border: 0;
+
+    background: transparent;
+
+    color:
+        var(--dorado);
+
+    cursor: pointer;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.entrar-admin {
+    width: 100%;
+
+    margin-top: 45px;
+
+    padding: 20px 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 0;
+
+    background:
+        var(--dorado);
+
+    color: #080808;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition: .3s;
+}
+
+.entrar-admin:hover {
+    background:
+        var(--dorado-claro);
+
+    transform:
+        translateY(-3px);
+}
+
+.entrar-admin:disabled {
+    opacity: .5;
+
+    cursor: wait;
+}
+
+.mensaje-login {
+    min-height: 20px;
+
+    margin-top: 20px;
+
+    color: #c86868;
+
+    font-size: 11px;
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes respirar {
+
+    0%, 100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.08);
+    }
+
+}
+
+
+/* CELULAR */
+
+@media(max-width:800px) {
+
+    .login {
+        grid-template-columns: 1fr;
+    }
+
+    .login-marca {
+        min-height: 390px;
+
+        padding: 35px 7%;
+    }
+
+    .login-frase h1 {
+        font-size: 65px;
+    }
+
+    .login-pie {
+        display: none;
+    }
+
+    .login-formulario {
+        min-height: auto;
+
+        padding:
+            80px 7%;
+    }
+
+}
+
+/* PANEL */
+.panel-body{background:#090909;min-height:100vh;color:#fff}.panel-top{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:20px 4%;background:rgba(9,9,9,.94);border-bottom:1px solid #242424;backdrop-filter:blur(12px)}.dashboard{width:min(1500px,92%);margin:0 auto;padding:50px 0 80px}.dash-title{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:35px}.dash-title h1{font:600 clamp(38px,5vw,70px)/.95 "Playfair Display",serif}.dash-title h1 em{color:var(--dorado);font-weight:600}.panel-muted,.storage-note{color:#777;margin-top:14px}.month-picker{font-size:9px;letter-spacing:2px;color:#888}.month-picker input,.search-admin,.sale-form input,.sale-form select{display:block;margin-top:8px;background:#111;border:1px solid #2b2b2b;color:#fff;padding:13px 14px;border-radius:8px;font:inherit}.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:35px}.stats article{background:#111;border:1px solid #222;padding:22px;border-radius:12px}.stats span{display:block;color:#777;font-size:8px;letter-spacing:1.5px}.stats strong{display:block;font-size:25px;margin:10px 0 4px}.stats small{color:#555}.stats .profit{border-color:#6f5a27;background:linear-gradient(145deg,#17140c,#111)}.stats .profit strong{color:var(--dorado-claro)}.admin-section{background:#101010;border:1px solid #222;border-radius:14px;padding:24px;margin-bottom:18px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:20px}.section-head h2{font:600 30px "Playfair Display",serif}.search-admin{width:min(360px,100%);margin:0}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:1050px}th{text-align:left;color:#666;font-size:8px;letter-spacing:1.4px;padding:12px 9px;border-bottom:1px solid #292929}td{padding:13px 9px;border-bottom:1px solid #1d1d1d;font-size:12px;vertical-align:middle}.product-cell{display:flex;align-items:center;gap:11px;min-width:230px}.product-cell img{width:42px;height:52px;object-fit:cover;border-radius:5px;background:#fff}.product-cell small{display:block;color:#666;margin-top:3px}.cell-input,.status-select{width:90px;background:#090909;border:1px solid #303030;color:#fff;padding:9px;border-radius:6px}.status-select{width:125px}.gain{color:#d8bd70;font-weight:700}.loss{color:#e47b7b}.gold,.outline,.mini-action{border:0;cursor:pointer;border-radius:7px;font-weight:700;letter-spacing:.5px}.gold{background:var(--dorado);color:#090909;padding:14px 18px}.outline{background:transparent;color:#aaa;border:1px solid #333;padding:10px 13px}.mini-action{background:#222;color:#ddd;padding:9px 10px}.danger{color:#c87878}.admin-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}.sale-form{display:grid;gap:14px}.sale-form label{color:#777;font-size:9px;letter-spacing:1px}.sale-form input,.sale-form select{width:100%}.sales-list{max-height:390px;overflow:auto}.sale-item{display:grid;grid-template-columns:1fr auto auto;gap:15px;padding:13px 0;border-bottom:1px solid #222;align-items:center}.sale-item small{color:#666;display:block;margin-top:4px}.sale-item b:last-child{color:var(--dorado)}.storage-note{text-align:center;font-size:11px}.empty-admin{color:#666;padding:30px 0;text-align:center}
+@media(max-width:1100px){.stats{grid-template-columns:repeat(2,1fr)}.admin-grid{grid-template-columns:1fr}}@media(max-width:700px){.panel-top{padding:16px 5%}.panel-top .outline:first-child{display:none}.dashboard{padding-top:30px}.dash-title{align-items:flex-start;flex-direction:column}.stats{grid-template-columns:1fr 1fr}.stats article{padding:16px}.stats strong{font-size:20px}.section-head{align-items:flex-start;flex-direction:column}.search-admin{width:100%}.admin-section{padding:16px}.sale-item{grid-template-columns:1fr auto}.sale-item .sale-cost{display:none}}
+.management-grid{grid-template-columns:1fr 1fr}.sale-form textarea{display:block;width:100%;margin-top:8px;background:#111;border:1px solid #2b2b2b;color:#fff;padding:13px 14px;border-radius:8px;font:inherit;resize:vertical}.calc-preview{padding:14px;background:#17140c;border:1px solid #6f5a27;border-radius:8px;color:#aaa}.calc-preview strong{color:var(--dorado-claro);float:right}.switch-row{display:flex!important;justify-content:space-between;align-items:center;background:#111;border:1px solid #2b2b2b;padding:13px 14px;border-radius:8px}.switch-row input{width:auto!important;margin:0!important;accent-color:var(--dorado)}.admin-divider{border:0;border-top:1px solid #292929;margin:30px 0}.product-cell code{display:block;color:#8a7444;margin-top:4px;font-size:9px}.delete-product{background:transparent;color:#c87878;border:1px solid #4a2929;margin-left:5px}@media(max-width:900px){.management-grid{grid-template-columns:1fr}}
+
+.promo-status{margin-top:12px;padding:10px 12px;border-radius:10px;font-size:12px;font-weight:800;letter-spacing:.08em;background:#202020;border:1px solid #333}
+.promo-status.active{border-color:#6d8d52;color:#cde9b4}.promo-status.scheduled{border-color:#8a7445;color:#e9d29d}.promo-status.expired{border-color:#835252;color:#e7aaaa}.promo-status.off{color:#999}
+.notice-preview{margin-top:12px;padding:13px;border-radius:12px;background:linear-gradient(90deg,#c9a86a,#e3c98f);color:#17130d;text-align:center}.notice-preview b{margin-right:8px}.notice-preview span{opacity:.82}

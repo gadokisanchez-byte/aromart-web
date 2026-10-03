@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AromArt Admin</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body class="login-body">
+
+    <main class="login">
+
+        <section class="login-marca">
+
+            <a href="../index.html" class="admin-logo">
+                AROMART
+                <span>SHOP</span>
+            </a>
+
+            <div class="login-frase">
+                <p>ADMINISTRACIÓN</p>
+
+                <h1>
+                    Controla tu
+                    <em>universo.</em>
+                </h1>
+            </div>
+
+            <span class="login-pie">
+                AROMART SHOP · 2026
+            </span>
+
+        </section>
+
+
+        <section class="login-formulario">
+
+            <div class="formulario-contenido">
+
+                <p class="mini">ACCESO PRIVADO</p>
+
+                <h2>Bienvenido.</h2>
+
+                <p class="login-descripcion">
+                    Ingresa tus datos para acceder al panel
+                    de AromArt Shop.
+                </p>
+
+
+                <form id="formLogin">
+
+                    <label for="email">
+                        CORREO
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="tu@correo.com"
+                        required
+                    >
+
+
+                    <label for="password">
+                        CONTRASEÑA
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="••••••••"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            onclick="mostrarPassword()"
+                            id="verPassword"
+                        >
+                            VER
+                        </button>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="entrar-admin"
+                        id="botonLogin"
+                    >
+                        ENTRAR AL PANEL
+                        <span>→</span>
+                    </button>
+
+
+                    <p
+                        id="mensajeLogin"
+                        class="mensaje-login"
+                    ></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+    <script src="admin.js"></script>
+
+</body>
+</html>
