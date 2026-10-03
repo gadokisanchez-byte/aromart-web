@@ -1,1 +1,0 @@
-Corregido el guardado de cupones y avisos. No vuelvas a ejecutar el SQL. Reemplaza los archivos en GitHub y espera el despliegue de Vercel.
